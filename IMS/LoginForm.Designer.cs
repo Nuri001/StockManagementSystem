@@ -37,6 +37,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -85,7 +88,7 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(192, 89);
+            this.txtUserName.Location = new System.Drawing.Point(196, 137);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(169, 23);
             this.txtUserName.TabIndex = 5;
@@ -95,7 +98,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Narkisim", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(23, 89);
+            this.label2.Location = new System.Drawing.Point(27, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 19);
             this.label2.TabIndex = 4;
@@ -103,27 +106,67 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(192, 135);
+            this.txtPassword.Location = new System.Drawing.Point(196, 183);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(169, 23);
             this.txtPassword.TabIndex = 11;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Narkisim", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(23, 135);
+            this.label5.Location = new System.Drawing.Point(27, 183);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 19);
             this.label5.TabIndex = 10;
             this.label5.Text = "Password:";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(155, 289);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(108, 39);
+            this.btnLogin.TabIndex = 12;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // Clear
+            // 
+            this.Clear.AutoSize = true;
+            this.Clear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Clear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Clear.Location = new System.Drawing.Point(196, 235);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(35, 15);
+            this.Clear.TabIndex = 13;
+            this.Clear.Text = "Clear";
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(260, 233);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(108, 19);
+            this.checkBox1.TabIndex = 14;
+            this.checkBox1.Text = "Show Password";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 450);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.Clear);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtUserName);
@@ -132,6 +175,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -151,5 +195,8 @@
         public Label label2;
         public TextBox txtPassword;
         public Label label5;
+        private Button btnLogin;
+        private Label Clear;
+        private CheckBox checkBox1;
     }
 }
